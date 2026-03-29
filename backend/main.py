@@ -30,10 +30,14 @@ def home():
 
 
 @app.post("/insertvalue")
-def inserting(data:insertingbasemodel):
-    insertuser(data)
-    return "Registerd Successfully..."
-    
+def inserting(data: insertingbasemodel):
+    try:
+        print("Incoming data:", data)
+        insertuser(data)
+        return "Registered Successfully..."
+    except Exception as e:
+        print("ERROR:", e)
+        return {"error": str(e)}
     
 @app.put("/updatepassword")
 def updating(data:updatebasemodel):
