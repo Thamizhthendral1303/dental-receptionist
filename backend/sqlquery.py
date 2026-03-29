@@ -44,9 +44,14 @@ def checkuser(otpobj, data):
         conn = dbconn()
         cursor = conn.cursor()
 
-        sqlselect = "SELECT id FROM userlist WHERE email = %s"
-        cursor.execute(sqlselect, (data.email,))
+        email = data.email.strip().lower()
+
+        sqlselect = "SELECT id FROM userlist WHERE LOWER(TRIM(email)) = %s"
+        cursor.execute(sqlselect, (email,))
         user = cursor.fetchone()
+
+        print("INPUT:", email)
+        print("DB RESULT:", user)
 
         if user:
             sqlinsert = "INSERT INTO userotplist (otp, userid) VALUES (%s, %s)"
@@ -66,7 +71,6 @@ def checkuser(otpobj, data):
     except Exception as e:
         print("ERROR:", e)
         return {"status": "error", "message": str(e)}
-
 
 
 def sqlotpchk(data):
