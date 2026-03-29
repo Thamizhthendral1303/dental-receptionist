@@ -48,8 +48,8 @@ def updating(data:updatebasemodel):
 
 @app.post("/usercheck")
 def checkuserapp(data:checkbasemodel):
-    # otpobj = otpgeneration(data)
-    otpobj = {"otp": "1234"}
+    otpobj = otpgeneration(data)
+    # otpobj = {"otp": "1234"}
     # print(otpobj)
     chk = checkuser(otpobj,data)
     # return chk
