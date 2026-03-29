@@ -40,29 +40,32 @@ def updatepassword(data):
 
 
 def checkuser(otpobj, data):
-    conn = dbconn()
-    cursor = conn.cursor()
+    try:
+        conn = dbconn()
+        cursor = conn.cursor()
 
-    sqlselect = "SELECT id FROM userlist WHERE email = %s"
-    cursor.execute(sqlselect, (data.email,))
-    user = cursor.fetchone()
+        sqlselect = "SELECT id FROM userlist WHERE email = %s"
+        cursor.execute(sqlselect, (data.email,))
+        user = cursor.fetchone()
 
-    if user:
-        sqlinsert = "INSERT INTO userotplist (otp, userid) VALUES (%s, %s)"
-        cursor.execute(sqlinsert, (otpobj["otp"], user[0]))
+        if user:
+            sqlinsert = "INSERT INTO userotplist (otp, userid) VALUES (%s, %s)"
+            cursor.execute(sqlinsert, (otpobj["otp"], user[0]))
 
-        conn.commit()
-        conn.close()
+            conn.commit()
+            conn.close()
 
-        return {
-            "status": "pass",
-            "userid": user[0]
-        }
-    else:
-        conn.close()
-        return {
-            "status": "fail"
-        }
+            return {
+                "status": "pass",
+                "userid": user[0]
+            }
+        else:
+            conn.close()
+            return {"status": "fail"}
+
+    except Exception as e:
+        print("ERROR:", e)
+        return {"status": "error", "message": str(e)}
 
 
 
