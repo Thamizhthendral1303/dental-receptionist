@@ -22,6 +22,7 @@ export const Signuppage = () => {
     username: "",
     password: "",
     address: "",
+    email:""
   });
 
   const handleChange = (e) => {
