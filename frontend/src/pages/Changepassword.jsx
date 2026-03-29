@@ -36,7 +36,7 @@ export const Changepassword = () => {
       getpass.newpassword !== "" &&
       getpass.newpassword == getpass.confirmpassword
     ) {
-      axios.put("https://dental-receptionist-xr5t.onrender.com/updatepassword", getpass).then((res) => {
+      axios.put("https://dental-receptionist-poc8.onrender.com/updatepassword", getpass).then((res) => {
         if (res.data) {
           alert(res.data);
           navigate("/");

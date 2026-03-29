@@ -27,7 +27,7 @@ export const Loingpage = () => {
   };
 
   const handleSubmit = () => {
-    axios.post("https://dental-receptionist-xr5t.onrender.com/login", userval).then((res) => {
+    axios.post("https://dental-receptionist-poc8.onrender.com/login", userval).then((res) => {
       if (res.data.status == "failed") {
         alert("USER NAME AND PASSWORD IS MAY BE WRONG...");
       } else {

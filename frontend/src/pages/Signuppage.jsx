@@ -45,7 +45,7 @@ export const Signuppage = () => {
         getval.password !== " " &&
         getval.address !== " "
       ) {
-        axios.post("https://dental-receptionist-xr5t.onrender.com/insertvalue", getval).then((res) => {
+        axios.post("https://dental-receptionist-poc8.onrender.com/insertvalue", getval).then((res) => {
           alert(res.data);
           navigate("/");
         });

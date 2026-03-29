@@ -17,7 +17,7 @@ export const Dashboard = () => {
   const [dbdata, Setdbdata] = useState({});
 
   useEffect(() => {
-    axios.post("https://dental-receptionist-xr5t.onrender.com/userdata", getid).then((res) => {
+    axios.post("https://dental-receptionist-poc8.onrender.com/userdata", getid).then((res) => {
       Setdbdata(res.data);
     });
   }, []);

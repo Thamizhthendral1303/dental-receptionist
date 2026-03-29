@@ -24,7 +24,7 @@ export const Forgetpage = () => {
     // console.log(userval);'
    
     try {
-      axios.post("https://dental-receptionist-xr5t.onrender.com/usercheck", userval).then((res) => {
+      axios.post("https://dental-receptionist-poc8.onrender.com/usercheck", userval).then((res) => {
         sessionStorage.setItem("usernameval", res.data.user[0]);
         navigate("/otppage");
       });

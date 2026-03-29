@@ -27,7 +27,7 @@ export const Otppage = () => {
 
     console.log(otpvalue);
 
-    axios.post("https://dental-receptionist-xr5t.onrender.com/otpcheck", getval).then((res) => {
+    axios.post("https://dental-receptionist-poc8.onrender.com/otpcheck", getval).then((res) => {
       // console.log(res.data.otpval[0]);
       if (res.data.otpval[0] == otpvalue.userid) {
         alert("Your " + res.data.status);
