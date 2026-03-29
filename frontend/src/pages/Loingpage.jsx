@@ -1,84 +1,3 @@
-import React, { useEffect, useState } from "react";
-// import "../styles/loginpage.css";
-
-// import img from "../assets/loginimage.jpg";
-// import { Inputtags } from "../components/Inputtags";
-// import { Buttontag } from "../components/Buttontag";
-// import { useNavigate } from "react-router-dom";
-
-// import axios from "Axios";
-
-// export const Loingpage = () => {
-//   const navigate = useNavigate();
-
-//   const [userval, Setuserval] = useState({ username: "", password: "" });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     Setuserval({ ...userval, [name]: value });
-//   };
-
-//   const handleForget = () => {
-//     navigate("/forgetpage");
-//   };
-//   const handlesignup = () => {
-//     navigate("/signuppage");
-//   };
-
-//   const handleSubmit = () => {
-//     axios.post("http://127.0.0.1:8000/login", userval).then((res) => {
-//       if (res.data.status == "failed") {
-//         alert("USER NAME AND PASSWORD IS MAY BE WRONG...");
-//       } else {
-//         if (userval.username !== "" && userval.password !== "") {
-//           sessionStorage.setItem("userid", res.data.userid[0]);
-//           alert("LOGIN SUCCESSFULL");
-//           navigate("/dashboard");
-//         } else {
-//           alert("Enter the user name and password");
-//         }
-//       }
-//     });
-//   };
-
-//   return (
-//     <>
-//       <div className="login-page-maindiv">
-//         <div className="image-div">
-//           <img src={img} alt="noimage" srcset="" />
-//         </div>
-//         <div className="login-page-subdiv">
-//           <div className="login-formdiv">
-//             <Inputtags
-//               type="text"
-//               placeholder="User Name"
-//               onchg={handleChange}
-//               name="username"
-//             />
-//             <Inputtags
-//               type="password"
-//               placeholder="Password"
-//               onchg={handleChange}
-//               name="password"
-//             />
-//           </div>
-//           <div className="login-buttondiv">
-//             <Buttontag value="LOGIN" onclk={handleSubmit} />
-//           </div>
-//           <div className="login-forgetdiv">
-//             <p className="paraforget" onClick={handleForget}>
-//               Forget Password.?
-//             </p>
-//             <p>
-//               If you dont have any account please --{" "}
-//               <span onClick={handlesignup}>Sign up</span>
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
 
 import "../styles/loginpage.css";
 
@@ -107,7 +26,7 @@ export const Loingpage = () => {
   };
 
   const handleSubmit = () => {
-    axios.post("http://127.0.0.1:8000/login", userval).then((res) => {
+    axios.post("https://dental-receptionist-xr5t.onrender.com/login", userval).then((res) => {
       if (res.data.status == "failed") {
         alert("USER NAME AND PASSWORD IS MAY BE WRONG...");
       } else {

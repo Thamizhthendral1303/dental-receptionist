@@ -27,7 +27,7 @@ export const PatientRegsiter = () => {
     console.log(registervalue);
 
     axios
-      .post("http://127.0.0.1:8000/patientregister", registervalue)
+      .post("https://dental-receptionist-xr5t.onrender.com/patientregister", registervalue)
       .then((res) => {
         console.log(res.data);
       });
