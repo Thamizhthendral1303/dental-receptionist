@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Loingpage } from "./pages/Loingpage";
-import { Forgetpage } from "./pages/forgetpage";
+import { Forgetpage } from "./pages/Forgetpage";
 import { Otppage } from "./pages/Otppage";
 import { Changepassword } from "./pages/Changepassword";
 import { Signuppage } from "./pages/Signuppage";
