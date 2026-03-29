@@ -1,0 +1,140 @@
+.loginpage-maindiv{
+  /* background-color: aqua; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginpage-subdiv{
+  height: 95%;
+  width: 95%;
+  /* background-color: aquamarine; */
+  display: flex;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.374);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+.loginpage-imagediv{
+height: 70%;
+width: 40%;
+/* background-color: bisque; */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.loginpage-imagediv img{
+  height: 100%;
+  width: auto;
+}
+
+.loginpage-inputdiv{
+height: 70%;
+width:50%;
+background-color: rgb(89, 109, 254);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+border-radius: 5px;
+ box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.374);
+
+}
+.loginpage-inputdiv h2{
+  font-size: 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loginpage-formdiv{
+  height: 70%;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.inputsdiv{
+height: 60%;
+width: 70%;
+/* background-color: brown; */
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+row-gap: 10px;
+}
+.buttonsdiv{
+height: 30%;
+width: 70%;
+/* background-color: rgb(42, 165, 61); */
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.forgetdiv{
+height: 25%;
+width: 70%;
+display: flex;
+align-items: start;
+justify-content: center;
+flex-direction: column;
+/* background-color: rgb(42, 101, 165); */
+row-gap: 10px;
+}
+.forgetdiv p{
+  font-size: large;
+}
+
+.forgetdiv p span:hover{
+  cursor: pointer;
+  font-size: larger;
+  text-decoration: underline;
+  
+}
+
+.paraforget:hover{
+  color: black;
+  cursor: pointer;
+}
+
+
+@media (max-width:400px){
+
+  .loginpage-subdiv{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+  .loginpage-imagediv{
+    height: 50%;
+    width: 90%;
+  }
+  .loginpage-inputdiv h2{
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+  .loginpage-imagediv img{
+    height: 100%;
+    width: auto;
+  }
+  .loginpage-inputdiv{
+    height: 48%;
+    width: 93%;
+  }
+
+  .forgetdiv p{
+  font-size: small;
+
+}
+.forgetdiv span{
+  text-decoration: underline;
+}
+  
+}

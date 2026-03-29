@@ -1,0 +1,139 @@
+.signup-maindiv{
+  /* background-color: aqua; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-subdiv{
+  height: 95%;
+  width: 95%;
+  /* background-color: aquamarine; */
+  display: flex;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.374);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+.signup-imagediv{
+height: 70%;
+width: 40%;
+/* background-color: bisque; */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.signup-imagediv img{
+  height: 100%;
+  width: auto;
+}
+
+.signup-inputdiv{
+height: 90%;
+width:50%;
+background-color: rgb(89, 109, 254);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+border-radius: 5px;
+ box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.374);
+
+}
+.signup-inputdiv h2{
+  font-size: 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup-formdiv{
+  height: 70%;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.inputsdiv{
+height: 70%;
+width: 70%;
+/* background-color: brown; */
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+row-gap: 10px;
+}
+.buttonsdiv{
+height: 25%;
+width: 70%;
+/* background-color: rgb(42, 165, 61); */
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.forgetdiv{
+height: 10%;
+width: 70%;
+display: flex;
+align-items: start;
+justify-content: center;
+flex-direction: column;
+/* background-color: rgb(42, 101, 165); */
+row-gap: 10px;
+}
+.forgetdiv p{
+  font-size: large;
+}
+
+.forgetdiv p span:hover{
+  cursor: pointer;
+  font-size: larger;
+  text-decoration: underline;
+  
+}
+
+.paraforget:hover{
+  color: black;
+  cursor: pointer;
+}
+
+
+@media (max-width:400px){
+
+  .signup-subdiv{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+  .signup-imagediv{
+ display: none;
+  }
+  .signup-inputdiv h2{
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+  .signup-inputdiv{
+    height: 88%;
+    width: 93%;
+  }
+
+  .inputsdiv{
+    width: 100%;
+  }
+  .forgetdiv p{
+  font-size: small;
+
+}
+.forgetdiv span{
+  text-decoration: underline;
+}
+  
+}
