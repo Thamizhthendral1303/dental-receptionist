@@ -27,7 +27,7 @@ export const PatientRegsiter = () => {
     console.log(registervalue);
 
     axios
-    
+
       .post("https://dental-receptionist-poc8.onrender.com/patientregister", registervalue)
       .then((res) => {
         console.log(res.data);
